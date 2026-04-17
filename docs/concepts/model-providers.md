@@ -671,6 +671,7 @@ Abliteration ships as a bundled Anthropic-compatible provider:
         baseUrl: "https://api.abliteration.ai",
         apiKey: "${ABLITERATION_API_KEY}",
         api: "anthropic-messages",
+        authHeader: true,
         models: [{ id: "abliterated-model", name: "Abliterated Model" }],
       },
     },
