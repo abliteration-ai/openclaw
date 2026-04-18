@@ -9,16 +9,15 @@ read_when:
 # Abliteration
 
 [abliteration.ai](https://abliteration.ai) exposes Anthropic-compatible and
-OpenAI-compatible endpoints. The bundled OpenClaw provider uses the
-Anthropic-compatible Messages route so it appears directly in the onboarding
-provider picker.
+OpenAI-compatible endpoints. The bundled OpenClaw provider uses the OpenAI
+Responses API.
 
-| Property | Value                                       |
-| -------- | ------------------------------------------- |
-| Provider | `abliteration`                              |
-| Auth     | `ABLITERATION_API_KEY`                      |
-| API      | Anthropic-compatible (`anthropic-messages`) |
-| Base URL | `https://api.abliteration.ai`               |
+| Property | Value                                 |
+| -------- | ------------------------------------- |
+| Provider | `abliteration`                        |
+| Auth     | `ABLITERATION_API_KEY`                |
+| API      | OpenAI Responses (`openai-responses`) |
+| Base URL | `https://api.abliteration.ai/v1`      |
 
 ## Getting started
 
@@ -60,16 +59,15 @@ provider picker.
 </AccordionGroup>
 
 <Note>
-For Anthropic-compatible providers, OpenClaw stores the API origin without
-`/v1`. The runtime appends `/v1/messages` and `/v1/messages/count_tokens`
-internally.
+OpenClaw stores Abliteration with the `/v1` base URL because the bundled plugin
+targets the OpenAI Responses API directly.
 </Note>
 
 ## Built-in catalog
 
 | Model ref                        | Name              | Input      | Context | Max output | Notes                          |
 | -------------------------------- | ----------------- | ---------- | ------- | ---------- | ------------------------------ |
-| `abliteration/abliterated-model` | Abliterated Model | text,image | 128,000 | 8,192      | Default model; Anthropic route |
+| `abliteration/abliterated-model` | Abliterated Model | text,image | 128,000 | 8,192      | Default model; Responses route |
 
 ## Config example
 

@@ -13,7 +13,7 @@
       "choiceLabel": "Abliteration API key",
       "groupId": "abliteration",
       "groupLabel": "Abliteration",
-      "groupHint": "Anthropic-compatible",
+      "groupHint": "OpenAI Responses API",
       "optionKey": "abliterationApiKey",
       "cliFlag": "--abliteration-api-key",
       "cliOption": "--abliteration-api-key <key>",

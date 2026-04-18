@@ -8,6 +8,7 @@ import {
   ABLITERATION_BASE_URL,
   ABLITERATION_DEFAULT_MODEL_REF,
   ABLITERATION_MODEL_CATALOG,
+  ABLITERATION_PROVIDER_API,
   buildAbliterationModelDefinition,
 } from "./models.js";
 
@@ -33,7 +34,7 @@ function applyAbliterationProviderConfigInternal(cfg: OpenClawConfig): OpenClawC
 
   providers[providerId] = {
     ...existingProviderRest,
-    api: "anthropic-messages",
+    api: ABLITERATION_PROVIDER_API,
     baseUrl: ABLITERATION_BASE_URL,
     authHeader: true,
     ...(normalizedApiKey ? { apiKey: normalizedApiKey } : {}),

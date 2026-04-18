@@ -652,7 +652,7 @@ Synthetic provides Anthropic-compatible models behind the `synthetic` provider:
 
 ### Abliteration
 
-Abliteration ships as a bundled Anthropic-compatible provider:
+Abliteration ships as a bundled OpenAI Responses provider:
 
 - Provider: `abliteration`
 - Auth: `ABLITERATION_API_KEY`
@@ -668,9 +668,9 @@ Abliteration ships as a bundled Anthropic-compatible provider:
     mode: "merge",
     providers: {
       abliteration: {
-        baseUrl: "https://api.abliteration.ai",
+        baseUrl: "https://api.abliteration.ai/v1",
         apiKey: "${ABLITERATION_API_KEY}",
-        api: "anthropic-messages",
+        api: "openai-responses",
         authHeader: true,
         models: [{ id: "abliterated-model", name: "Abliterated Model" }],
       },

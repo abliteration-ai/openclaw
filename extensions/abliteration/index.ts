@@ -15,7 +15,7 @@ export default defineSingleProviderPluginEntry({
       {
         methodId: "api-key",
         label: "Abliteration API key",
-        hint: "Anthropic-compatible",
+        hint: "OpenAI Responses API",
         optionKey: "abliterationApiKey",
         flagName: "--abliteration-api-key",
         envVar: "ABLITERATION_API_KEY",
@@ -27,7 +27,7 @@ export default defineSingleProviderPluginEntry({
           choiceLabel: "Abliteration API key",
           groupId: "abliteration",
           groupLabel: "Abliteration",
-          groupHint: "Anthropic-compatible",
+          groupHint: "OpenAI Responses API",
         },
       },
     ],

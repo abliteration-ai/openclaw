@@ -1,7 +1,8 @@
 import type { ModelDefinitionConfig } from "openclaw/plugin-sdk/provider-model-shared";
 
-// Anthropic-compatible providers store the API origin without /v1.
-export const ABLITERATION_BASE_URL = "https://api.abliteration.ai";
+// Abliteration uses the OpenAI Responses API, so the configured base URL keeps /v1.
+export const ABLITERATION_BASE_URL = "https://api.abliteration.ai/v1";
+export const ABLITERATION_PROVIDER_API = "openai-responses";
 export const ABLITERATION_DEFAULT_MODEL_ID = "abliterated-model";
 export const ABLITERATION_DEFAULT_MODEL_REF = `abliteration/${ABLITERATION_DEFAULT_MODEL_ID}`;
 const ABLITERATION_FLAT_COST_PER_MILLION_TOKENS = 5;

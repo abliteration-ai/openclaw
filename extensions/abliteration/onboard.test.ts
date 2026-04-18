@@ -14,8 +14,8 @@ describe("abliteration onboard", () => {
   it("adds Abliteration provider with correct settings", () => {
     const cfg = applyAbliterationConfig({});
     expect(cfg.models?.providers?.abliteration).toMatchObject({
-      baseUrl: "https://api.abliteration.ai",
-      api: "anthropic-messages",
+      baseUrl: "https://api.abliteration.ai/v1",
+      api: "openai-responses",
       authHeader: true,
     });
     expectProviderOnboardPrimaryModel({
@@ -36,8 +36,8 @@ describe("abliteration onboard", () => {
     const provider = expectProviderOnboardMergedLegacyConfig({
       applyProviderConfig: applyAbliterationProviderConfig,
       providerId: "abliteration",
-      providerApi: "anthropic-messages",
-      baseUrl: "https://api.abliteration.ai",
+      providerApi: "openai-responses",
+      baseUrl: "https://api.abliteration.ai/v1",
       legacyApi: "openai-completions",
     });
     const ids = provider?.models.map((m) => m.id);
